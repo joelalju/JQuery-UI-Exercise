@@ -6,14 +6,8 @@ $(window).on("load", function() {
 	spin.spinner("value", 5);
 	generate();
 
-	$('#spinner').on({
+	$('#refresh').on({
 		click: function() {
-			generate();
-		},
-		mouseleave: function() {
-			generate();
-		},
-		stop: function() {
 			generate();
 		}
 	});
