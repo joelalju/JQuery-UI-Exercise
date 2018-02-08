@@ -6,10 +6,17 @@ $(window).on("load", function() {
 	spin.spinner("value", 5);
 	generate();
 
-	$('#refresh').on({
-		click: function() {
+	$('#spinner').on({
+		keyup: function() {
+			generate();
+		},
+		mouseup: function() {
 			generate();
 		}
+	});
+
+	$('.ui-spinner-button').click(function() {
+		generate();
 	});
 });
 
